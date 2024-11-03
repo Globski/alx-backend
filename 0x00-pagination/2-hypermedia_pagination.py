@@ -104,9 +104,9 @@ class Server:
         page_size (int): The number of items per page (default is 10).
 
         Returns:
-        Dict[str, Any]: A dictionary containing pagination information including
-                         page size, current page, data, next page, previous page,
-                         and total pages.
+        Dict[str, Any]: A dictionary containing pagination information
+                         including page size, current page, data,
+                         next page, previous page, and total pages.
         """
         data = self.get_page(page, page_size)
         total_items = len(self.dataset())

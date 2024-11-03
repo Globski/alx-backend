@@ -11,9 +11,9 @@ class LRUCache(BaseCaching):
     """ LRUCache class that inherits from BaseCaching.
 
     This class implements a caching system that follows
-    the LRU (Least Recently Used) principle.
-    When the cache exceeds a specified maximum number of items, it will
-    discard the least recently used item.
+    the LRU (Least Recently Used) principle. When the
+    cache exceeds a specified maximum number of items,
+    it will discard the least recently used item.
 
     Attributes:
         cache_data (dict): A dictionary that holds the cached items.

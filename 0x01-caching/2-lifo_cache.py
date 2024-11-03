@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """ LIFOCache module
-This module defines the LIFOCache class, which implements a Last In, First Out (LIFO)
-caching mechanism, inheriting from BaseCaching.
+This module defines the LIFOCache class, which implements
+a Last In, First Out (LIFO) caching mechanism, inheriting
+from BaseCaching.
 """
 from base_caching import BaseCaching
 
@@ -9,8 +10,9 @@ from base_caching import BaseCaching
 class LIFOCache(BaseCaching):
     """ LIFOCache class that inherits from BaseCaching.
 
-    This class implements a caching system that follows the LIFO (Last In, First Out)
-    principle. When the cache exceeds a specified maximum number of items, it will
+    This class implements a caching system that follows
+    the LIFO (Last In, First Out) principle.
+    When the cache exceeds a specified maximum number of items, it will
     discard the last item added to the cache.
 
     Attributes:

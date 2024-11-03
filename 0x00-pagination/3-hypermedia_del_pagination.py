@@ -6,6 +6,7 @@ Deletion-resilient hypermedia pagination
 import csv
 from typing import List, Dict
 
+
 class Server:
     """Server class to paginate a database of popular baby names.
     """
@@ -30,23 +31,29 @@ class Server:
         """
         if self.__indexed_dataset is None:
             dataset = self.dataset()
-            self.__indexed_dataset = {i: dataset[i] for i in range(len(dataset))}
+            truncated_dataset = dataset[:1000]
+            self.__indexed_dataset = {
+                i: dataset[i]
+                for i in range(len(dataset))
+            }
         return self.__indexed_dataset
 
     def get_hyper_index(self, index: int = None, page_size: int = 10) -> Dict:
         """Return a hypermedia pagination dictionary.
-        
+  
         Parameters:
         index (int): The starting index for pagination (default is None).
         page_size (int): The number of items to return (default is 10).
-        
+
         Returns:
-        Dict: A dictionary containing the index, page_size, data, and next_index.
-        
+        Dict: A dictionary containing the index,
+        page_size, data, and next_index.
+
         Raises:
         AssertionError: If index is out of range.
         """
-        assert index >= 0 and index < len(self.__indexed_dataset), "Index out of range"
+        assert index >= 0 and index < len(self.__indexed_dataset), \
+            "Index out of range"
 
         indexed_data = self.indexed_dataset()
 

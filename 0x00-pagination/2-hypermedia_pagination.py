@@ -1,14 +1,15 @@
 #!/usr/bin/env python3
 """
-This module provides functionality for paginating a dataset of popular baby names.
+This module provides functionality for paginating
+a dataset of popular baby names.
 
 It includes a helper function to calculate index ranges for pagination
-and a Server class that manages the dataset and provides methods to 
+and a Server class that manages the dataset and provides methods to
 retrieve specific pages of data.
 
 Usage:
     To use this module, create an instance of the Server class and call
-    the `get_page` or `get_hyper` method with the desired page number 
+    the `get_page` or `get_hyper` method with the desired page number
     and page size.
 """
 
@@ -25,7 +26,8 @@ def index_range(page: int, page_size: int) -> Tuple[int, int]:
     page_size (int): The number of items per page.
 
     Returns:
-    Tuple[int, int]: A tuple containing the start and end indices for the dataset slice.
+    Tuple[int, int]: A tuple containing the start and end
+    indices for the dataset slice.
 
     Raises:
     ValueError: If page or page_size is less than 1.
@@ -80,8 +82,11 @@ class Server:
         Raises:
         AssertionError: If page or page_size is not a positive integer.
         """
-        assert isinstance(page, int) and page > 0, "page must be a positive integer"
-        assert isinstance(page_size, int) and page_size > 0, "page_size must be a positive integer"
+
+        assert (isinstance(page, int) and page > 0), \
+            "page must be a positive integer"
+        assert (isinstance(page_size, int) and page_size > 0), \
+            "page_size must be a positive integer"
 
         start_index, end_index = index_range(page, page_size)
         dataset = self.dataset()

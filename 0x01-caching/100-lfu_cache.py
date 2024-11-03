@@ -17,9 +17,9 @@ class LFUCache(BaseCaching):
 
     Attributes:
         cache_data (dict): A dictionary that holds the cached items.
-        frequencies (dict): A dictionary that tracks the frequency of each 
+        frequencies (dict): A dictionary that tracks the frequency of each
                             key.
-        order (dict): A dictionary that maps frequencies to a list of keys 
+        order (dict): A dictionary that maps frequencies to a list of keys
                       for LRU.
         min_freq (int): The minimum frequency of keys currently in the cache.
     """
@@ -27,7 +27,7 @@ class LFUCache(BaseCaching):
     def __init__(self):
         """ Initialize the LFUCache.
 
-        This method calls the parent class's initializer to set up the 
+        This method calls the parent class's initializer to set up the
         cache_data dictionary and initializes the supporting data structures 
         for LFU management.
         """
@@ -39,17 +39,17 @@ class LFUCache(BaseCaching):
     def put(self, key, item):
         """ Add an item to the cache.
 
-        This method adds an item to the cache with the given key. If the 
-        number of items exceeds the maximum allowed (MAX_ITEMS), the least 
-        frequently used item will be discarded. In case of a tie, the least 
+        This method adds an item to the cache with the given key. If the
+        number of items exceeds the maximum allowed (MAX_ITEMS), the least
+        frequently used item will be discarded. In case of a tie, the least
         recently used item will be discarded.
 
         Args:
-            key (str): The key under which the item will be stored in the 
+            key (str): The key under which the item will be stored in the
                         cache.
             item (any): The item to be cached.
 
-        If key or item is None, this method will not perform any operation. 
+        If key or item is None, this method will not perform any operation.
         If adding the item exceeds the cache limit, it will discard the least
         frequently used item and print a message indicating which key was
         discarded.

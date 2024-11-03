@@ -24,8 +24,9 @@ class LRUCache(BaseCaching):
     def __init__(self):
         """ Initialize the LRUCache.
 
-        This method calls the parent class's initializer to set up the cache_data
-        dictionary and any other necessary initialization from BaseCaching.
+        This method calls the parent class's initializer to
+        set up the cache_data dictionary and any other
+        necessary initialization from BaseCaching.
         It also initializes an order list to track the
         usage order of cached items.
         """
@@ -35,12 +36,13 @@ class LRUCache(BaseCaching):
     def put(self, key, item):
         """ Add an item to the cache.
 
-        This method adds an item to the cache with the given key. If the number of items
-        exceeds the maximum allowed (MAX_ITEMS), the least recently used item will be
-        discarded.
+        This method adds an item to the cache with the given key.
+        If the number of items exceeds the maximum allowed (MAX_ITEMS),
+        the least recently used item will be discarded.
 
         Args:
-            key (str): The key under which the item will be stored in the cache.
+            key (str): The key under which the item will be
+            stored in the cache.
             item (any): The item to be cached.
 
         If key or item is None, this method will not perform any operation.

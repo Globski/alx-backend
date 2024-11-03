@@ -40,7 +40,7 @@ class Server:
 
     def get_hyper_index(self, index: int = None, page_size: int = 10) -> Dict:
         """Return a hypermedia pagination dictionary.
-  
+
         Parameters:
         index (int): The starting index for pagination (default is None).
         page_size (int): The number of items to return (default is 10).

@@ -1,7 +1,8 @@
-#!/usr/bin/env python3 
+#!/usr/bin/env python3
 """ MRUCache module
 """
 from base_caching import BaseCaching
+
 
 class MRUCache(BaseCaching):
     """ MRUCache class that inherits from BaseCaching
@@ -21,7 +22,8 @@ class MRUCache(BaseCaching):
             item (Any): The item to be cached.
 
         If key or item is None, this method should not do anything.
-        If the number of items exceeds MAX_ITEMS, the most recently used item is discarded.
+        If the number of items exceeds MAX_ITEMS, the most recently
+        used item is discarded.
         """
         if key is None or item is None:
             return
@@ -53,5 +55,5 @@ class MRUCache(BaseCaching):
 
         self.order.remove(key)
         self.order.append(key)
-        
+
         return self.cache_data[key]

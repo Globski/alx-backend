@@ -14,7 +14,8 @@ class LRUCache(BaseCaching):
 
     Attributes:
         cache_data (dict): A dictionary that holds the cached items.
-        order (list): A list that tracks the order of keys based on usage for LRU eviction.
+        order (list): A list that tracks the order of keys based on usage 
+                      for LRU eviction.
     """
 
     def __init__(self):

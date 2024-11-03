@@ -3,10 +3,11 @@
 """
 from base_caching import BaseCaching
 
+
 class BasicCache(BaseCaching):
     """ BasicCache class inherits from BaseCaching
     """
-    
+ 
     def put(self, key, item):
         """ Add an item in the cache
         """

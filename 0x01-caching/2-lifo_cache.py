@@ -22,17 +22,18 @@ class LIFOCache(BaseCaching):
     def __init__(self):
         """ Initialize the LIFOCache.
 
-        This method calls the parent class's initializer to set up the cache_data
-        dictionary and any other necessary initialization from BaseCaching.
+        This method calls the parent class's initializer
+        to set up the cache_data dictionary and any other
+        necessary initialization from BaseCaching.
         """
         super().__init__()
 
     def put(self, key, item):
         """ Add an item to the cache.
 
-        This method adds an item to the cache with the given key. If the number of items
-        exceeds the maximum allowed (MAX_ITEMS), the last item added to the cache will be
-        discarded.
+        This method adds an item to the cache with the given key.
+        If the number of items exceeds the maximum allowed (MAX_ITEMS),
+        the last item added to the cache will be discarded.
 
         Args:
             key (str): The key under which the item will be stored in the cache.

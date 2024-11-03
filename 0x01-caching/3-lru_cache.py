@@ -46,8 +46,9 @@ class LRUCache(BaseCaching):
             item (any): The item to be cached.
 
         If key or item is None, this method will not perform any operation.
-        If adding the item exceeds the cache limit, it will discard the least recently
-        used item and print a message indicating which key was discarded.
+        If adding the item exceeds the cache limit, it will discard
+        the least recently used item and print a message
+        indicating which key was discarded.
         """
         if key is None or item is None:
             return
@@ -69,14 +70,16 @@ class LRUCache(BaseCaching):
     def get(self, key):
         """ Retrieve an item from the cache.
 
-        This method returns the value associated with the given key from the cache.
-        It also updates the usage order since the item is being accessed.
+        This method returns the value associated with the given
+        key from the cache. It also updates the usage order
+        since the item is being accessed.
 
         Args:
             key (str): The key of the item to retrieve.
 
         Returns:
-            The value associated with the key if it exists, or None if the key is None
+            The value associated with the key if it exists,
+            or None if the key is None
             or does not exist in the cache.
         """
         if key is None or key not in self.cache_data:

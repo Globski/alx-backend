@@ -79,7 +79,7 @@ class LFUCache(BaseCaching):
         """
         if key is None or key not in self.cache_data:
             return None
-        
+
         self._update_frequency(key)
         return self.cache_data[key]
 
@@ -89,7 +89,6 @@ class LFUCache(BaseCaching):
         self.frequencies[key] += 1
         new_freq = self.frequencies[key]
 
-        # Update order
         self.order[freq].remove(key)
         if not self.order[freq]:
             if self.min_freq == freq:

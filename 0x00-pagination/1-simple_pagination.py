@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 """
-This module provides functionality for paginating a dataset of popular baby names.
+This module provides functionality for paginating
+a dataset of popular baby names.
 
 It includes a helper function to calculate index ranges for pagination
-and a Server class that manages the dataset and provides methods to 
+and a Server class that manages the dataset and provides methods to
 retrieve specific pages of data.
 
 Usage:
@@ -33,6 +34,7 @@ def index_range(page: int, page_size: int) -> Tuple[int, int]:
     start_index = (page - 1) * page_size
     end_index = start_index + page_size
     return start_index, end_index
+
 
 class Server:
     """Server class to paginate a database of popular baby names.

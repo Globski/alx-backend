@@ -17,15 +17,17 @@ class LRUCache(BaseCaching):
 
     Attributes:
         cache_data (dict): A dictionary that holds the cached items.
-        order (list): A list that tracks the order of keys based on usage for LRU eviction.
+        order (list): A list that tracks the order of keys
+        based on usage for LRU eviction.
     """
 
     def __init__(self):
         """ Initialize the LRUCache.
 
         This method calls the parent class's initializer to set up the cache_data
-        dictionary and any other necessary initialization from BaseCaching. It also
-        initializes an order list to track the usage order of cached items.
+        dictionary and any other necessary initialization from BaseCaching.
+        It also initializes an order list to track the
+        usage order of cached items.
         """
         super().__init__()
         self.order = []

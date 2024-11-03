@@ -36,12 +36,14 @@ class LIFOCache(BaseCaching):
         the last item added to the cache will be discarded.
 
         Args:
-            key (str): The key under which the item will be stored in the cache.
+            key (str): The key under which the item will
+            be stored in the cache.
             item (any): The item to be cached.
 
         If key or item is None, this method will not perform any operation.
-        If adding the item exceeds the cache limit, it will discard the last added item
-        and print a message indicating which key was discarded.
+        If adding the item exceeds the cache limit, it will discard
+        the last added item and print a message indicating
+        which key was discarded.
         """
         if key is None or item is None:
             return
@@ -56,13 +58,15 @@ class LIFOCache(BaseCaching):
     def get(self, key):
         """ Retrieve an item from the cache.
 
-        This method returns the value associated with the given key from the cache.
+        This method returns the value associated with the
+        given key from the cache.
 
         Args:
             key (str): The key of the item to retrieve.
 
         Returns:
-            The value associated with the key if it exists, or None if the key is None
+            The value associated with the key if it exists,
+            or None if the key is None
             or does not exist in the cache.
         """
         if key is None or key not in self.cache_data:

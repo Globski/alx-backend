@@ -1,15 +1,18 @@
 #!/usr/bin/env python3
 """ LRUCache module
-This module defines the LRUCache class, which implements a Least Recently Used (LRU)
-caching mechanism, inheriting from BaseCaching.
+This module defines the LRUCache class, which implements
+a Least Recently Used (LRU) caching mechanism,
+inheriting from BaseCaching.
 """
 from base_caching import BaseCaching
+
 
 class LRUCache(BaseCaching):
     """ LRUCache class that inherits from BaseCaching.
 
-    This class implements a caching system that follows the LRU (Least Recently Used)
-    principle. When the cache exceeds a specified maximum number of items, it will
+    This class implements a caching system that follows
+    the LRU (Least Recently Used) principle.
+    When the cache exceeds a specified maximum number of items, it will
     discard the least recently used item.
 
     Attributes:

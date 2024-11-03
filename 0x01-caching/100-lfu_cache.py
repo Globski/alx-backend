@@ -1,17 +1,18 @@
 #!/usr/bin/env python3
 """ LFUCache module
-This module defines the LFUCache class, which implements a Least Frequently 
+This module defines the LFUCache class, which implements a Least Frequently
 Used (LFU) caching mechanism, inheriting from BaseCaching.
 """
 from base_caching import BaseCaching
 
+
 class LFUCache(BaseCaching):
     """ LFUCache class that inherits from BaseCaching.
 
-    This class implements a caching system that follows the LFU (Least 
-    Frequently Used) principle. When the cache exceeds a specified maximum 
-    number of items, it will discard the least frequently used item, and 
-    if there's a tie, it will use LRU (Least Recently Used) to decide 
+    This class implements a caching system that follows the LFU (Least
+    Frequently Used) principle. When the cache exceeds a specified maximum
+    number of items, it will discard the least frequently used item, and
+    if there's a tie, it will use LRU (Least Recently Used) to decide
     which item to evict.
 
     Attributes:
@@ -49,8 +50,8 @@ class LFUCache(BaseCaching):
             item (any): The item to be cached.
 
         If key or item is None, this method will not perform any operation. 
-        If adding the item exceeds the cache limit, it will discard the least 
-        frequently used item and print a message indicating which key was 
+        If adding the item exceeds the cache limit, it will discard the least
+        frequently used item and print a message indicating which key was
         discarded.
         """
         if key is None or item is None:
@@ -74,15 +75,15 @@ class LFUCache(BaseCaching):
     def get(self, key):
         """ Retrieve an item from the cache.
 
-        This method returns the value associated with the given key from the 
-        cache. It also updates the frequency and usage order since the item 
+        This method returns the value associated with the given key from the
+        cache. It also updates the frequency and usage order since the item
         is being accessed.
 
         Args:
             key (str): The key of the item to retrieve.
 
         Returns:
-            The value associated with the key if it exists, or None if the 
+            The value associated with the key if it exists, or None if the
             key is None or does not exist in the cache.
         """
         if key is None or key not in self.cache_data:

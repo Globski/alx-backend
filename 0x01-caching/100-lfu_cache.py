@@ -28,7 +28,7 @@ class LFUCache(BaseCaching):
         """ Initialize the LFUCache.
 
         This method calls the parent class's initializer to set up the
-        cache_data dictionary and initializes the supporting data structures 
+        cache_data dictionary and initializes the supporting data structures
         for LFU management.
         """
         super().__init__()
